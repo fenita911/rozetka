@@ -15,7 +15,7 @@ public class WebDriverSettings {
 
     @Before
     public void setUp () throws IOException {
-        System.setProperty("webdriver.chrome.driver", new File("."+File.separator+"src"+File.separator+"main"+File.separator+"resources"+File.separator+"chromedriver").getAbsolutePath());
+        System.setProperty("webdriver.chrome.driver", new File("src"+File.separator+"main"+File.separator+"resources"+File.separator+"chromedriver").getAbsolutePath());
 //        System.setProperty("webdriver.chrome.driver", "/home/nataliiamoroz/G29Project/rozetka/src/main/resources/chromedriver");
 
         //System.setProperty("webdriver.gecko.driver", getClass().getClassLoader().getResource("geckodriver").getPath());
