@@ -1,5 +1,6 @@
 package rozetkaTest;
 
+import com.google.common.io.Resources;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,8 +14,8 @@ public class WebDriverSettings {
 
     @Before
     public void setUp () throws IOException {
-//        System.setProperty("webdriver.chrome.driver", getClass().getClassLoader().getResource("chromedriver").getPath());
-        System.setProperty("webdriver.chrome.driver", "/home/nataliiamoroz/G29Project/rozetka/src/main/resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver", Resources.getResource("chromedriver").getPath());
+//        System.setProperty("webdriver.chrome.driver", "/home/nataliiamoroz/G29Project/rozetka/src/main/resources/chromedriver");
 
         //System.setProperty("webdriver.gecko.driver", getClass().getClassLoader().getResource("geckodriver").getPath());
         chromeDriver = new ChromeDriver();
