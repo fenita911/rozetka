@@ -6,7 +6,6 @@ import org.junit.Before;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.io.File;
 import java.io.IOException;
 
 public class WebDriverSettings {
@@ -15,7 +14,7 @@ public class WebDriverSettings {
 
     @Before
     public void setUp () throws IOException {
-        System.setProperty("webdriver.chrome.driver", new File("src"+File.separator+"main"+File.separator+"resources"+File.separator+"chromedriver").getAbsolutePath());
+        System.setProperty("webdriver.chrome.driver", getClass().getClassLoader().getResource("chromedriver").getPath());
 //        System.setProperty("webdriver.chrome.driver", "/home/nataliiamoroz/G29Project/rozetka/src/main/resources/chromedriver");
 
         //System.setProperty("webdriver.gecko.driver", getClass().getClassLoader().getResource("geckodriver").getPath());
